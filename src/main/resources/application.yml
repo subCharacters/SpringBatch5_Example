@@ -16,4 +16,4 @@ spring:
     # schema.slq? ???? ??? ??.
   sql:
     init:
-      mode: always
+      mode: never
