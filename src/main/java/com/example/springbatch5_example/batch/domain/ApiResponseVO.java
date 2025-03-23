@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class ApiResponseVo {
+public class ApiResponseVO {
     private int status;
     private String msg;
 }

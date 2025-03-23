@@ -2,7 +2,7 @@ package com.example.springbatch5_example.service;
 
 import com.example.springbatch5_example.batch.domain.ApiInfo;
 import com.example.springbatch5_example.batch.domain.ApiRequestVO;
-import com.example.springbatch5_example.batch.domain.ApiResponseVo;
+import com.example.springbatch5_example.batch.domain.ApiResponseVO;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
@@ -18,7 +18,7 @@ import java.util.List;
 
 public abstract class AbstractApiService {
 
-    public ApiResponseVo service(List<? extends ApiRequestVO> apiRequest) {
+    public ApiResponseVO service(List<? extends ApiRequestVO> apiRequest) {
 
         RestTemplateBuilder restTemplateBuilder = new RestTemplateBuilder();
         RestTemplate restTemplate = restTemplateBuilder.errorHandler(new ResponseErrorHandler() {
@@ -42,5 +42,5 @@ public abstract class AbstractApiService {
         return doApiService(restTemplate, apiInfo);
     }
 
-    protected abstract ApiResponseVo doApiService(RestTemplate restTemplate, ApiInfo apiInfo);
+    protected abstract ApiResponseVO doApiService(RestTemplate restTemplate, ApiInfo apiInfo);
 }
