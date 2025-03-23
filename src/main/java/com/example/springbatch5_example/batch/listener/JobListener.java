@@ -13,6 +13,6 @@ public class JobListener implements JobExecutionListener {
 
     @Override
     public void afterJob(JobExecution jobExecution) {
-        System.out.println("execute time :" + Duration.between(jobExecution.getStartTime(), jobExecution.getEndTime()));
+        System.out.println("execute time :" + Duration.between(jobExecution.getStartTime(), jobExecution.getEndTime()).toMillis() + "ms");
     }
 }

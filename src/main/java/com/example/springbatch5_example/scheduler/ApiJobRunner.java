@@ -39,7 +39,7 @@ public class ApiJobRunner extends JobRunner {
         //  - 월: 매월
         //  - 요일: 무시 (일 필드를 사용하므로 ?)
         // 30초마다 트리거 작동
-        Trigger trigger = buildJobTrigger("0/30 * * * * ?");
+        Trigger trigger = buildJobTrigger("0/10 * * * * ?");
 
         try {
             scheduler.scheduleJob(jobDetail, trigger);
