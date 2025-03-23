@@ -1,0 +1,19 @@
+spring:
+  batch:
+    chunk-size: 10
+    job:
+      # enabled: false
+      name: ${job.name:NONE}
+      
+      # meta table ??? ?? ??
+    jdbc:
+      initialize-schema: always
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/batchExample?serverTimezone=Asia/Tokyo
+    username: root
+    password: Admin!@34
+    # schema.slq? ???? ??? ??.
+  sql:
+    init:
+      mode: always
